@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"jsx": "react",
+		"paths": {
+			"ABI": ["abi"],
+			"ASSETS": ["assets"],
+			"COMPONENTS": ["components"],
+			"CONTAINERS": ["containers"],
+			"PAGES": ["pages"],
+			"HOOKS": ["hooks"],
+			"SHARED": ["shared"],
+			"ROUTES": ["routes"],
+			"SCSS": ["scss"],
+			"SERVICES": ["services"],
+			"CONTEXT": ["context"],
+			"UTILS": ["utils"]
+		}
+	}
+}
