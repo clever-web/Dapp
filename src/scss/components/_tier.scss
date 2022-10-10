@@ -1,0 +1,62 @@
+.tier {
+	display: inline-grid;
+	grid-template-columns: 1fr 2fr;
+	justify-content: center;
+	align-items: center;
+	height: 55px;
+	min-width: 48px;
+	padding: 0 5px 0 5px;
+	border: 1px solid $white;
+	border-radius: 5px;
+
+    &__black {
+        border: 1px solid #FFF;
+        background: linear-gradient(133.31deg, #070618 27.64%, #484848 52.73%, #070618 88.68%);
+    }
+
+    &__diamond {
+        background: linear-gradient(102.74deg, #BEB6C7 14.4%, #E0E3ED 29.64%, #A7ABC3 66.65%);
+    }
+
+    &__gold {
+        background: linear-gradient(133.31deg, #967E51 27.64%, #C2AB7E 70.45%, #9A855C 104.38%);
+
+    }
+
+    &__silver {
+        background: linear-gradient(130.44deg, #BDBDBD 6.79%, #898989 42.44%, #BBBBBB 71.77%, #F3F3F3 92.27%);
+
+    }
+
+    &__default {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+    }
+
+	&__txts {
+        position: relative;
+        padding-right: 10px;
+        margin-left: 6px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+        }
+	}
+
+    &__txt {
+        color: $white;
+        text-transform: uppercase;
+        font-size: $font-size-14;
+        font-weight: 900;
+
+        &:first-of-type {
+            margin-bottom: $size;
+        }
+    }
+}
