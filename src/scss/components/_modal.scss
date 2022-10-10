@@ -1,0 +1,13 @@
+.modal {
+	z-index: 120;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: calc(100% - 30px);
+	max-width: 385px;
+	transform: translate(-50%, -50%);
+	background: var(--background-color);
+	border: 1px solid var(--text-color);
+	border-radius: 10px;
+	overflow: hidden;
+}
