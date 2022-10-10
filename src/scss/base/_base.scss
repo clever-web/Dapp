@@ -1,0 +1,63 @@
+:root {
+	--text-color: #fff;
+	--background-color: #070618;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-y: scroll;
+}
+
+body {
+	height: 100vh;
+	font-family: $font-primary;
+	font-size: $font-size-16;
+	line-height: 1.2;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-weight: 400;
+	letter-spacing: 0.005rem;
+}
+
+// font,  p {
+// 	color: var(--text-color);
+// }
+
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+}
+
+img {
+	max-width: 140px;
+	height: auto;
+}
