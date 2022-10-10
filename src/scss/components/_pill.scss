@@ -1,0 +1,102 @@
+.pill {
+	display: inline-grid;
+	grid-template-rows: 1fr 1fr;
+	justify-content: center;
+
+	&__top,
+	&__bottom {
+		@include flex-center;
+		text-transform: uppercase;
+	}
+
+	&__large {
+		.pill__top,
+		.pill__bottom {
+			padding: $size-x2 $size-x3;
+			font-size: $font-size-24;
+		}
+
+		.pill__top {
+			background-color: $green;
+			font-weight: 700;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+
+		.pill__bottom {
+			color: var(--background-color);
+			background-color: var(--text-color);
+			font-weight: 700;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+	}
+
+	&__small {
+		grid-template-columns: 1fr;
+		height: 55px;
+		min-width: 48px;
+
+		.pill__top {
+			text-align: center;
+			min-width: 50px;
+			font-weight: 1000;
+			color: var(--background-color);
+			background-color: var(--text-color);
+			border-left: 1px solid var(--text-color);
+			border-right: 1px solid var(--text-color);
+			border-top: 1px solid var(--text-color);
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			font-size: $font-size-12;
+
+			@include respond(phone_large) {
+				color: var(--background-color);
+				background-color: var(--text-color);
+				border-left: 1px solid var(--text-color);
+				border-right: 1px solid var(--text-color);
+				border-top: 1px solid var(--text-color);
+			}
+
+			&.pill__extra-border {
+				border-left: 1px solid $dark;
+				border-right: 1px solid $dark;
+				border-top: 1px solid $dark;
+			}
+		}
+
+		.pill__bottom {
+			padding: 5px;
+			background-color: transparent;
+			border-left: 1px solid var(--text-color);
+			border-right: 1px solid var(--text-color);
+			border-bottom: 1px solid var(--text-color);
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			font-size: $font-size-14;
+			font-weight: 1000;
+
+			@include respond(phone_large) {
+				color: var(--text-color);
+				background-color: var(--background-color);
+				border-left: 1px solid var(--text-color);
+				border-right: 1px solid var(--text-color);
+				border-bottom: 1px solid var(--text-color);
+			}
+
+			&.pill__extra-border {
+				border-left: 1px solid $dark;
+				border-right: 1px solid $dark;
+				border-bottom: 1px solid $dark;
+			}
+
+			&__icon {
+				max-width: 16px;
+			}
+		}
+
+		.pill__bottom__opacity {
+			background-color: transparent !important;
+		}
+	}
+}
