@@ -1,0 +1,36 @@
+.input__number {
+	&__container {
+		position: relative;
+
+		&::after {
+			content: '\0024';
+			position: absolute;
+			top: 52%;
+			left: 0;
+			transform: translateY(-50%);
+			font-family: $font-primary;
+			font-size: $font-size-24;
+			font-weight: 700;
+		}
+	}
+
+	width: 100%;
+	background-color: transparent;
+	padding: 5px 5px 5px 20px;
+	font-family: $font-primary;
+	font-size: $font-size-24;
+	font-weight: 700;
+	color: $white;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid $white;
+}
+
+input[type='number'] {
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	-moz-appearance: textfield;
+}
