@@ -1,0 +1,21 @@
+.title {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	font-weight: 700;
+	font-size: $font-size-12;
+	text-transform: uppercase;
+	font-style: italic;
+	letter-spacing: 1px;
+
+	@include respond(phone_large) {
+		top: -70px;
+		left: 0;
+        font-size: $font-size-30;
+	}
+
+	&__home {
+		top: -60px;
+	}
+
+}
