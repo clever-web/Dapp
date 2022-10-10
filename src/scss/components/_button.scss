@@ -1,0 +1,166 @@
+.theme-dark {
+	--btn-outlined-bg-color: 255, 255, 255, 0.1;
+	--btn-outlined-green-bg-color: 153, 255, 204, 0.1;
+	--btn-disabled-border-color: 255, 255, 255, 0.2;
+}
+
+.theme-light {
+	--btn-outlined-bg-color: 7, 6, 24, 1;
+	--btn-outlined-green-bg-color: 37, 56, 60, 1;
+	--btn-disabled-border-color: 255, 255, 255, 0.2;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+	height: 35px;
+	text-align: center;
+	color: $dark;
+	font-family: $font-primary;
+	font-weight: 700;
+	font-size: $font-size-14;
+	line-height: 1.2;
+	text-decoration: underline;
+	background-color: transparent;
+	border-radius: 10px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: all 0.2s ease;
+
+	&--small {
+		height: 20px;
+		padding: 10px 15px;
+		background-color: $dark;
+		color: $green;
+		font-size: 1.2rem;
+		font-weight: 400;
+		border: 1px solid rgba($white, 0.2);
+		border-radius: 5px;
+
+		&:hover {
+			border: 1px solid rgba($green, 0.2);
+			background-color: #25383c;
+		}
+	}
+
+	&--onTheTop {
+		z-index: 999;
+	}
+
+	&--glossy {
+		box-shadow: 0px 0px 18px #99FFCC, 0px 0px 8px #99FFCC;
+	}
+
+	&--large {
+		min-width: 220px;
+		padding: 16px 50px;
+		font-size: 1.9rem;
+		text-decoration: none;
+		border-radius: 8px;
+	}
+
+	&--green {
+		border: 1px solid $green;
+		background-color: $green;
+
+		&:hover {
+			background-color: rgba($green, 0.6);
+		}
+	}
+
+	&--white {
+		background-color: $white;
+	}
+
+	&--wide {
+		width: 100%;
+	}
+
+	&--outlined {
+		border: 1px solid var(--text-color);
+		color: var(--text-color);
+
+		&:hover {
+			background-color: rgba(var(--btn-outlined-bg-color));
+			color: $white;
+		}
+	}
+
+	&--outlined--dark {
+		border: 1px solid $dark;
+		color: $dark;
+
+		&:hover {
+			background-color: $dark;
+			color: $white;
+		}
+	}
+
+	&--outlined--white {
+		border: 1px solid $white;
+		color: $white;
+	}
+	&--outlined--green {
+		background-color: $dark;
+		border: 1px solid $green;
+		color: $green;
+
+		&:hover {
+			background-color: rgba(var(--btn-outlined-green-bg-color));
+		}
+	}
+
+	&--color--white {
+		color: $white;
+	}
+
+	&--disabled,
+	&--disabled:hover {
+		background-color: rgba(var(--text-color-rgb), 0.2);
+		color: rgba(var(--text-color-rgb), 0.2);
+		text-decoration: none;
+		border: 1px solid rgba(var(--btn-disabled-border-color)) !important;
+		text-decoration: underline;
+		cursor: initial;
+	}
+
+	&--glow {
+		box-shadow: 0px 0px 4px 0px $green, inset 0px 0px 4px 0px $green,
+			0px 0px 3px 0px $green, inset 0px 0px 3px 0px $green,
+			0px 0px 3px 0px $green, inset 0px 0px 3px 0px $green,
+			0px 0px 5px 0px #e80a89, inset 0px 0px 5px 0px #e80a89,
+			0px 0px 7px 0px $green, inset 0px 0px 7px 0px $green,
+			0px 0px 5px 0px $green, inset 0px 0px 5px 0px $green;
+
+		&:hover {
+			box-shadow: 0px 0px 4px 0px rgba($green, 0.3),
+				inset 0px 0px 4px 0px rgba($green, 0.3),
+				0px 0px 3px 0px rgba($green, 0.3),
+				inset 0px 0px 3px 0px rgba($green, 0.3),
+				0px 0px 3px 0px rgba($green, 0.3),
+				inset 0px 0px 3px 0px rgba($green, 0.3),
+				0px 0px 5px 0px rgba(#e80a89, 0.3),
+				inset 0px 0px 5px 0px rgba(#e80a89, 0.3),
+				0px 0px 7px 0px rgba($green, 0.3),
+				inset 0px 0px 7px 0px rgba($green, 0.3),
+				0px 0px 5px 0px rgba($green, 0.3),
+				inset 0px 0px 5px 0px rgba($green, 0.3);
+
+			border: 1px solid rgba($white, 0.3);
+		}
+	}
+}
+
+.btn-icon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
