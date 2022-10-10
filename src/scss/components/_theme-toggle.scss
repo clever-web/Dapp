@@ -1,0 +1,19 @@
+.theme-toggle {
+	margin: 0 auto;
+
+	&__btn {
+		display: block;
+		height: 40px;
+		width: 40px;
+		outline: none;
+		background-color: transparent;
+		border: 1px solid transparent;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: border 0.2s ease;
+
+		&:hover {
+			border: 1px solid $green;
+		}
+	}
+}
