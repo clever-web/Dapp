@@ -1,0 +1,49 @@
+.calculator-modal {
+	&__header {
+		@include flex-center(space-between, center, row);
+		padding: $size $size $size $size-x2;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__body {
+		padding: $size-x2 15px 0 15px;
+
+		&__coins {
+			display: flex;
+			align-items: center;
+
+			&__icon {
+				@include flex-center;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				background-color: var(--text-color);
+			}
+		}
+
+		&__table-head,
+		&__table-row {
+			display: grid;
+			grid-template-columns: 1fr 65px 1fr;
+			align-items: center;
+		}
+
+		&__table-row {
+			padding: $size;
+			border: 1px solid rgba(var(--common-border-color-rgb));
+			border-radius: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__footer {
+		padding: 3px;
+
+		&__bin {
+			border: 1px solid rgba(var(--common-border-color-rgb));
+			border-radius: 7px;
+			padding: $size;
+			text-align: center;
+		}
+	}
+}
