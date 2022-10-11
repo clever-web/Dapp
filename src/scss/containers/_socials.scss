@@ -1,0 +1,30 @@
+.socials {
+	@include flex-center;
+	width: 100%;
+	margin: auto 0;
+
+	&__item {
+		@include flex-center;
+		&:not(:first-of-type) {
+			margin-left: $size-x3;
+		}
+
+		&__link {
+			@include flex-center;
+		}
+	}
+
+	@include respond(phone_large) {
+		margin: 0;
+
+		&__item {
+			&:not(:first-of-type) {
+				margin-left: 15px;
+			}
+
+			&__link {
+				@include flex-center;
+			}
+		}
+	}
+}
