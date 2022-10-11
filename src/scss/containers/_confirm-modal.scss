@@ -1,0 +1,64 @@
+.confirm-modal {
+	.request-button > button {
+		padding-top: $size;
+		padding-bottom: $size;
+		border-radius: 5px;
+		height: auto;
+	}
+	&__header {
+		@include flex-center(space-between, center, row);
+		padding: 4px $size 4px $size-x2;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__summary {
+		@include flex-center(space-between, center, row);
+		padding: 0 $size 0 35px;
+		// border-bottom: 1px solid var(--text-color);
+		// padding-bottom: 5px !important;
+
+		&__icon {
+			@include flex-center;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			background-color: var(--background-color);
+		}
+	}
+
+	&__info {
+		border-bottom: 1px solid var(--text-color);
+		border-top: 1px solid var(--text-color);
+		p {
+			padding: 5px 0;
+			font-size: $font-size-14;
+			font-weight: 700;
+		}
+	}
+
+	&__arrow {
+		@include flex-center(flex-start, center, row);
+		margin-left: 48px;
+		margin-bottom: 4px;
+		font-size: $font-size-12;
+	}
+
+	&__footer {
+		&__row {
+			@include flex-center(space-between, center, row);
+			padding-left: $size-x3;
+			padding-right: $size-x3;
+			padding-bottom: $size;
+		}
+
+		&__update {
+			@include flex-center(flex-start, center, row);
+			padding: 5px 5px 5px 0;
+			margin-top: $size-x2;
+			margin-left: 3px;
+			margin-right: 3px;
+			border: 1px solid $yellow;
+			border-radius: 8px;
+		}
+	}
+}
