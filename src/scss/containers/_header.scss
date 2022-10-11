@@ -1,0 +1,54 @@
+.header {
+	position: relative;
+	overflow: hidden;
+	@include flex-center(space-between, center, row);
+	padding: 15px 15px 15px 15px;
+	border-bottom: 1px solid $white;
+	background-color: var(--header-bg);
+
+	@include respond(phone_large) {
+		position: unset;
+		overflow: unset;
+		border-bottom: unset;
+		background-color: var(--background-color);
+	}
+
+	&__logo {
+		@include flex-center;
+
+		&__img {
+			margin-right: $size;
+			width: 27px;
+			height: 48px;
+		}
+
+		&__description {
+			p {
+				color: $white;
+			}
+
+			@include flex-center(flex-start, center, row);
+
+			@include respond(phone_large) {
+				@include flex-center(center, flex-start, column);
+				p {
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+
+	&__toggle-menu {
+		@include flex-center(center, flex-end, column);
+		height: 48px;
+		width: 48px;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		outline: none;
+
+		@include respond(phone_large) {
+			display: none;
+		}
+	}
+}
