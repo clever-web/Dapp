@@ -1,0 +1,26 @@
+.reminder {
+	&__header {
+		@include flex-center(flex-start, center, row);
+
+		&__icon { margin-top: 4px; }
+	}
+
+	&__info--1 {
+		margin-top: $size;
+		padding: 15px;
+		border-radius: 10px;
+	}
+
+	&__info--2 {
+		margin-top: $size;
+		padding: 15px;
+		border-radius: 10px;
+
+		&__link {
+			&:link,
+			&:visited,
+			&:hover,
+			&:active { text-decoration: underline; }
+		}
+	}
+}
