@@ -1,0 +1,94 @@
+.select-token-with-input {
+	padding: $size-x2 15px;
+
+	@include respond(phone) {
+		@include flex-center(space-between, center, row);
+	}
+}
+
+.select-token-with-input__select {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	min-width: 160px;
+	margin-right: auto;
+
+	&__box {
+		@include flex-center(center, flex-start, column);
+		padding: 0 15px;
+	}
+
+	&__btn {
+		@include flex-center(space-between, center, row);
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid var(--text-color);
+		font-family: $font-primary;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $font-size-24;
+		color: var(--text-color);
+		cursor: pointer;
+	}
+
+	&__icon {
+		@include flex-center;
+		width: 50px;
+		height: 50px;
+		background-color: var(--text-color);
+		border-radius: 50%;
+	}
+
+	&__icon_text {
+		margin: 0 0 0 12px;
+		@media screen and (max-width: $bp-mobile-large) {
+			display: block;
+			margin: 7px 0 0 12px;
+		}
+	}
+
+	@include respond(phone) {
+		margin-right: $size-x2;
+	}
+}
+
+.select-token-with-input__summary {
+	@include flex-center(space-between, center, row);
+	padding: 11px 20px;
+	margin: 5px;
+	margin-top: $size;
+	background-color: rgba(var(--bg-mode-1));
+	border-radius: 5px;
+
+	&__max {
+		@include flex-center;
+
+		&__btn {
+			padding: 5px;
+			margin-right: $size;
+			border-radius: 5px;
+			background-color: $dark;
+			color: $green;
+			text-transform: uppercase;
+			text-decoration: underline;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			font-weight: 700;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		text-align: left;
+		margin-right: 15px;
+		background: transparent;
+		outline: none;
+		border: none;
+		font-family: $font-primary;
+		font-size: $font-size-20;
+		font-weight: 700;
+		color: $white;
+	}
+}
