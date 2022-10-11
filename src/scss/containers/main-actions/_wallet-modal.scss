@@ -1,0 +1,41 @@
+.theme-dark {
+	--connect-wallet-list-item-border: 255, 255, 255, 0.2;
+}
+
+.theme-light {
+	--connect-wallet-list-item-border: 7, 6, 24, 1;
+}
+
+.wallet-modal {
+	&__header {
+		padding: 0 $size-x3 $size-x2 $size-x3;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__body {
+		padding: 0 $size-x3 $size-x2 $size-x3;
+	}
+
+	&__list {
+		&__item {
+			@include flex-center(space-between, center, row);
+			padding: $size-x2 0;
+			cursor: pointer;
+			border-bottom: 1px solid
+				rgba(var(--connect-wallet-list-item-border));
+		}
+	}
+
+	&__footer {
+		margin-bottom: $size-x6;
+		&__link {
+			&:link,
+			&:active,
+			&:visited,
+			&:hover {
+				color: $blue;
+				text-decoration: underline;
+			}
+		}
+	}
+}
