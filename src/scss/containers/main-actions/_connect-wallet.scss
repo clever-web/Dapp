@@ -1,0 +1,44 @@
+.connect-wallet {
+	position: relative;
+	@include flex-center;
+	min-width: 100px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid $green;
+	background: $green;
+	outline: none;
+	text-align: center;
+	font-family: $font-primary;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-decoration: underline;
+	color: $dark;
+	cursor: pointer;
+
+	transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+	&:not(.connect-wallet--active):hover {
+		background: lighten($green, 8%);
+	}
+
+	&--active {
+		background: $dark;
+		color: $green;
+	}
+
+	&__caret {
+		transform: rotate(-180deg);
+	}
+
+	&__opened {
+		background-color: var(--background-color);
+
+		&__caret {
+			transform: rotate(0);
+		}
+	}
+
+	@include respond(phone_large) {
+		min-width: 150px;
+	}
+}
