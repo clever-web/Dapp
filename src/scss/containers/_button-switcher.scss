@@ -1,0 +1,31 @@
+.button__switcher {
+	padding: 1px;
+
+	&__bg {
+		@include flex-center;
+		border-radius: 10px;
+		border: 1px solid rgba(var(--switch-border));
+		background-color: rgba(var(--switch-bg));
+	}
+
+	&__btn {
+		font-weight: 400;
+		text-decoration: none;
+		padding: 25px;
+		border-radius: 7px;
+		width: 100%;
+		color: rgba(var(--text-color-rgb), 0.5);
+
+		&--active {
+			background-color: var(--text-color);
+			color: var(--background-color);
+            font-weight: 700;
+		}
+
+		&.btn--disabled {
+			background-color: transparent;
+			border: 0 !important;
+			pointer-events: none;
+		}
+	}
+}
