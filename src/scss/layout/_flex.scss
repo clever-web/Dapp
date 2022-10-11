@@ -1,0 +1,30 @@
+.d-flex { display: flex; }
+.flex-direction-column { flex-direction: column; }
+.flex-direction-row { flex-direction: row; }
+.align-items-start { align-items: flex-start; }
+.align-items-center { align-items: center; }
+.align-items-end { align-items: flex-end; }
+.align-self-start { align-self: flex-start; }
+.align-self-end { align-self: flex-end; }
+.justify-content-start { justify-content: space-between !important; }
+.justify-content-end { justify-content: flex-end; }
+.justify-content-center { justify-content: center; }
+.justify-content-space-between { justify-content: space-between; }
+.justify-content-space-evenly { justify-content: space-evenly; }
+
+.flex-direction-row\@phone { @include respond(phone) { flex-direction: row; } }
+
+.flex-center { @include flex-center; }
+
+.flex-order-n1 { order: -1; }
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+.flex-5 { flex: 5; }
+.flex-6 { flex: 6; }
+
+.gap-1 { gap: $size; }
+.gap-2 { gap: $size-x2; }
+.gap-3 { gap: $size-x3; }
