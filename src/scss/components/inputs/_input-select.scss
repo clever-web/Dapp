@@ -1,0 +1,56 @@
+.input__select {
+    position: relative;
+	display: inline-block;
+
+	select {
+		-webkit-appearance: none;
+		border: 1px solid $white;
+		border-radius: 5px;
+		background-color: var(--background-color);
+		outline: none;
+		cursor: pointer;
+		font-family: $font-primary;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: $font-size-14;
+		text-decoration: underline;
+		color: var(--text-color);
+	}
+
+	option {
+		color: var(--text-color);
+	}
+
+    &__select-box {
+        @include flex-center(center, flex-start, column);
+        padding: 0 15px;
+    }
+
+	&__select-container {
+		position: relative;
+        padding-right: $size-x2;
+
+        .select__icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+	}
+
+	&__select-note {
+		font-size: $font-size-14;
+	}
+
+	&__icon__container {
+		@include flex-center;
+	}
+
+	
+
+	&__icon--after {
+		position: absolute;
+		right: 12px;
+		top: calc(50% - 3px);
+	}
+}
