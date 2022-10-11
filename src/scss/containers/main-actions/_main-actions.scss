@@ -1,0 +1,242 @@
+.theme-dark {
+	--main-actions-input-border: 255, 255, 255, 0.2;
+}
+
+.theme-light {
+	--main-actions-input-border: 7, 6, 24, 1;
+}
+
+.main-actions {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	@include flex-center;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top: 1px solid var(--text-color);
+	background-color: var(--background-color);
+	z-index: 100;
+
+	&__currency {
+		position: relative;
+
+		&__list {
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			width: 250px;
+			padding: 15px;
+			border-radius: 5px;
+			border: 1px solid var(--accent-yellow);
+			background-color: var(--background-color);
+			z-index: 120;
+
+			&__title {
+				font-size: $font-size-20;
+				font-weight: 700;
+				margin-bottom: $size;
+				color: var(--accent-yellow);
+			}
+
+			&__item {
+				position: relative;
+				display: grid;
+				grid-template-columns: 1fr 50px;
+				align-items: center;
+				padding: 15px;
+				font-size: $font-size-16;
+
+				img {
+					margin: 0 auto;
+				}
+
+				&:not(:last-child) {
+					&::after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 1px;
+						background-color: var(--text-color);
+						opacity: 0.2;
+					}
+				}
+
+				&__active,
+				&:hover {
+					font-weight: 700;
+
+					&.main-actions__currency__list__item::before {
+						content: '';
+						position: absolute;
+						top: 52%;
+						transform: translateY(-50%);
+						left: 0;
+						width: 3px;
+						height: 14px;
+						background-color: $yellow;
+					}
+				}
+			}
+
+			@include respond(phone_large) {
+				bottom: unset;
+				top: 40px;
+				left: 50%;
+				right: unset;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__load {
+		position: relative;
+
+		&__list {
+			position: absolute;
+			bottom: 40px;
+			right: 20px;
+			padding: 5px 0;
+			border: 1px solid $dark;
+			border-radius: 5px;
+			background-color: $yellow;
+
+			&__item {
+				position: relative;
+				padding: 5px 15px;
+				color: $dark;
+				text-align: right;
+				font-size: $font-size-14;
+				cursor: pointer;
+
+				&::after {
+					display: block;
+					content: attr(title);
+					font-weight: 700;
+					height: 0;
+					overflow: hidden;
+					visibility: hidden;
+				}
+
+				&__active,
+				&:hover {
+					font-weight: 700;
+
+					&.main-actions__load__list__item::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 8px;
+						width: 3px;
+						height: 14px;
+						background-color: $dark;
+					}
+				}
+			}
+
+			@include respond(phone_large) {
+				bottom: unset;
+				top: 40px;
+				right: 20px;
+			}
+		}
+	}
+
+	&__connect-wallet {
+		position: relative;
+
+		&__popup {
+			position: absolute;
+			bottom: 40px;
+			right: -60%;
+			width: 340px;
+			border-radius: 5px;
+			border: 1px solid $green;
+			background-color: var(--background-color);
+			z-index: 120;
+
+			&__row {
+				padding: 20px;
+			}
+
+			&__row--1 {
+				@include flex-center(space-between, center, row);
+				border-bottom: 1px solid var(--text-color);
+			}
+			&__row--2 {
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 1px;
+					width: 100%;
+					background-color: var(--text-color);
+					opacity: 0.2;
+				}
+			}
+
+			&__select-container {
+				display: flex;
+				align-items: center;
+			}
+
+			&__select {
+				-webkit-appearance: none;
+				width: 100%;
+				padding: 15px;
+				border: 1px solid rgba(var(--main-actions-input-border));
+				border-radius: 5px;
+				background-color: var(--background-color);
+				outline: none;
+				cursor: pointer;
+				font-family: $font-primary;
+				font-weight: 700;
+				font-size: $font-size-14;
+				text-decoration: underline;
+				color: var(--text-color);
+			}
+
+			&__actions {
+				@include flex-center(space-between, center, row);
+				margin-top: $size-x2;
+
+				&__col {
+					display: flex;
+					align-items: center;
+					padding: 10px;
+					background-color: $dark;
+					border-radius: 5px;
+
+					a {
+						color: #99ffcc;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			@include respond(phone_large) {
+				bottom: unset;
+				top: 40px;
+				right: 0;
+			}
+		}
+	}
+
+	@include respond(phone_large) {
+		position: unset;
+		bottom: unset;
+		left: unset;
+		height: unset;
+		width: unset;
+		border-top: none;
+		padding-right: 0;
+		@include flex-center(space-between, center, row);
+	}
+}
