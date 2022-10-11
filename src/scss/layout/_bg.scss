@@ -1,0 +1,100 @@
+.linear-bg {
+	position: relative;
+	background: linear-gradient(
+		0deg,
+		rgba(139, 252, 179, 0.3) 0%,
+		rgba(139, 252, 179, 0.25) 20%,
+		rgba(139, 252, 179, 0.2) 35%,
+		rgba(139, 252, 179, 0.15) 60%,
+		rgba(139, 252, 179, 0.1) 75%,
+		rgba(139, 252, 179, 0) 90%
+	);
+	@media screen and (max-width: $bp-mobile-large) {
+		// background: var(--background-mobile-color);
+	height: 1000px;
+
+	}
+}
+
+@mixin bg-col {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 40%;
+		display: block;
+		height: 500px;
+		width: 80%;
+		background-color: var(--layout-bg-shape);
+
+		@include respond(phone_large) {
+			top: 22%;
+		}
+	}
+}
+
+.linear-bg__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	&--left {
+		@include bg-col;
+		&::before {
+			left: 0;
+			clip-path: polygon(
+				27% 0,
+				50% 23%,
+				81% 23%,
+				100% 41%,
+				100% 43%,
+				0 43%,
+				0 0
+			);
+		}
+
+		.linear-bg__divider {
+			position: absolute;
+			top: 22%;
+			height: 215px;
+			width: 200%;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				height: 10px;
+				width: 100%;
+				background-color: var(--layout-bg-shape);
+			}
+		}
+	}
+	&--right {
+		@include bg-col;
+		&::before {
+			right: 0;
+			clip-path: polygon(
+				20% 23%,
+				55% 23%,
+				74% 0,
+				100% 0,
+				100% 43%,
+				0 43%,
+				0 41%
+			);
+		}
+	}
+	@media screen and (max-width: $bp-mobile-large) {
+		&--right, &--left {
+			display: none;
+		}
+	}
+}
