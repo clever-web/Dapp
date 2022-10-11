@@ -1,0 +1,67 @@
+.progress-bar {
+	position: relative;
+	width: 100%;
+	@include flex-center(flex-end, center, row);
+	background-color: $dark;
+	margin-bottom: 22px;
+
+	&__line {
+		position: absolute;
+		height: 0px;
+		width: 100%;
+		border-radius: 40px;
+		margin-top: 15px;
+		background-color: var(--border-color);
+
+		&__fill {
+			position: relative;
+			height: 5px;
+			border-radius: 2.5px;
+			box-shadow: inset 0px -2px 2px rgba(80, 175, 149, 0.89);
+			background-color: $green;
+			// border-radius: 50%;
+			// box-shadow: inset 0px -2px 2px rgba(80, 175, 149, 0.89), inset 0px 2px 2px 1px #ffffff;
+
+			// &::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: -2px;
+			// 	height: 5px;
+			// 	width: 2px;
+			// 	background-color: $white;
+			// }
+
+			&__icon {
+				position: absolute;
+				top: 50%;
+				right: -5px;
+				transform: translateY(-50%);
+			}
+		}
+
+		&__fill.progress-bar__line__fill--completed {
+			border-top-right-radius: 40px;
+			border-bottom-right-radius: 40px;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+.progressBkColor1 {
+	background-color: #9AFFCD;
+	box-shadow: inset 0px -2px 2px rgba(80, 175, 149, 0.89), inset 0px 2px 2px 1px #ffffff;
+}
+
+.progressBkColor2 {
+	background-color: #0FA6A6;
+	box-shadow: inset 0px -2px 2px #006A6A;
+}
+
+.progressBkColor3 {
+	background-color: #66FFFF;
+	box-shadow: inset 0px -2px 2px #0FA6A6;
+}
