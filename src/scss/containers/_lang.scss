@@ -1,0 +1,107 @@
+.lang {
+	position: relative;
+    margin-bottom: 5px;
+
+	&__btn {
+		display: block;
+		height: 40px;
+		width: 40px;
+		font-family: $font-primary;
+		text-transform: uppercase;
+		color: $green;
+		font-weight: 700;
+		font-size: $font-size-14;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		background-color: $dark;
+		cursor: pointer;
+	}
+
+	&__dropdown {
+		display: none;
+		position: absolute;
+		bottom: 55px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: $size-x3 $size-x4;
+		border: 2px solid $green;
+		border-radius: 9px;
+		background-color: $dark;
+		z-index: 3;
+
+		&__item:not(:last-child) { margin-bottom: 20px; }
+
+		&__link {
+			position: relative;
+			font-size: $font-size-14;
+			color: $white;
+			transition: font-weight 0.1s ease-out;
+
+			&::after {
+				display: block;
+				content: attr(title);
+				font-weight: 700;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -25px;
+				width: 3px;
+				height: 100%;
+				background-color: transparent;
+			}
+
+			&:hover {
+				font-weight: 700;
+
+				&::before { background-color: $green; }
+			}
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid $green;
+		z-index: 5;
+		visibility: hidden;
+		opacity: 0;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 44px;
+		left: 7px;
+		width: 0;
+		height: 0;
+		border-left: 13px solid transparent;
+		border-right: 13px solid transparent;
+		border-top: 13px solid $dark;
+		z-index: 6;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&:hover {
+		.lang__dropdown { display: block; }
+
+		&::before,
+		&::after {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
