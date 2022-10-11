@@ -1,0 +1,74 @@
+.app-container {
+	max-width: $app-max-width;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: $content-max-width;
+	width: 100%;
+	margin: 0 auto;
+	@include respond(phone_large) {
+		border-top: 1px solid var(--text-color);
+	}
+}
+
+.box-max-width {
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.space-h {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.space-h--mobile {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: $font-size-14;
+
+	@include respond(phone_large) {
+		padding-left: 0;
+		padding-right: 0;
+		font-size: $font-size-14;
+	}
+}
+
+.space-v {
+	padding-top: $size-x2;
+	padding-bottom: $size-x2;
+}
+
+.main {
+	max-width: $app-max-width;
+	margin: 0 auto;
+	padding-bottom: 95px;
+
+	@include respond(phone_large) {
+		display: flex;
+		align-items: flex-start;
+		padding-bottom: 0;
+	}
+}
+
+.layout {
+	height: 100%;
+}
+
+.pill-desktop-layout {
+	@include respond(phone_large) {
+		top: 0;
+		right: 15px;
+	}
+}
+
+.total-value-desktop-layout {
+	position: absolute;
+	top: 0;
+	right: 15px;
+
+	@include respond(phone_large) {
+		left: 0;
+	}
+}
