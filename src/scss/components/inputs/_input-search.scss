@@ -1,0 +1,32 @@
+.theme-dark {
+	--input-search-bg-color: 255, 255, 255, 0.1;
+}
+
+.theme-light {
+	--input-search-bg-color: 7, 6, 24, 0.05;
+}
+
+.input__search__container {
+	position: relative;
+}
+
+.input__search {
+	width: 100%;
+	padding: $size $size-x2;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+	background: rgba(var(--input-search-bg-color));
+	color: var(--text-color);
+	font-family: $font-primary;
+	font-size: $font-size-14;
+	outline: none;
+
+	&__icon {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+	}
+}
