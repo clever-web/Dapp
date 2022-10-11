@@ -1,0 +1,34 @@
+.select-currency {
+	position: relative;
+	@include flex-center;
+	min-width: 100px;
+	height: 35px;
+	margin-right: $size-x2;
+	border-radius: 5px;
+	border: 1px solid var(--accent-yellow);
+	background: $yellow;
+	outline: none;
+	text-align: center;
+	font-family: $font-primary;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: $font-size-14;
+	text-decoration: underline;
+	color: $dark;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $dark;
+		color: $yellow !important;
+	}
+
+	&__opened {
+		background-color: var(--background-color);
+		color: var(--accent-yellow);
+		z-index: 120;
+
+		&__caret {
+			transform: rotate(-180deg);
+		}
+	}
+}
