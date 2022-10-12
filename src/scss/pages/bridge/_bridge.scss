@@ -1,0 +1,48 @@
+.bridge {
+	position: relative;
+	margin-top: $size;
+
+	&__value-pill {
+		margin-left: 87%;
+		min-width: 120px; 
+		@media (max-width: 960px) {
+			display: none;
+		}
+	}
+
+	&__box {
+		max-width: 540px;
+		margin: 0 auto;
+		padding-top: $size-x4;
+
+		&__container {
+			border: 1px solid var(--text-color);
+			border-radius: 10px;
+			background-color: var(--background-color);
+			overflow: hidden;
+		}
+
+		&__header {
+			padding: $size-x2 15px;
+			border-bottom: 1px solid var(--text-color);
+		}
+
+		&__input {
+			position: relative;
+
+			&__chain-code {
+				position: absolute;
+				top: 50px;
+				right: 20px;
+				font-size: $font-size-14;
+
+				@include respond(phone) {
+					top: 80px;
+					right: unset;
+					bottom: 5px;
+					left: 80px;
+				}
+			}
+		}
+	}
+}
