@@ -1,0 +1,45 @@
+.theme-dark {
+	--background-mobile-color: linear-gradient(180deg, rgba(139, 252, 179, 0), rgba(139, 252, 179, 0) 25%, rgba(139, 252, 179, 0.15) 29% 30%, rgba(139, 252, 179, 0) 30% 43%, rgb(35, 56, 44) 43% 44%, rgb(32, 48, 39) 56%);
+	--background-mobile-color-1: linear-gradient(180deg, black 0%, rgb(42, 51, 63) 100%);
+	--background-mobile-color-2: linear-gradient(180deg, black 0%, rgb(42, 60, 63) 100%);
+	--aprtext-color: transparent;
+	--text-color: #fff;
+	--text-color-rgb: 255, 255, 255;
+	--border-color: rgba(255, 255, 255, 0.1);
+	--background-color: #070618;
+	--background-color-rgb: 7, 6, 24;
+	--layout-bg-shape: rgba(7, 6, 24, 1);
+	--common-border-color-rgb: 255, 255, 255, 0.2;
+	--common-bg-color-rgb: 255, 255, 255, 0.1;
+	--header-bg: 'transparent';
+	--accent-yellow: #f1e26e;
+	--accent-green: #99ffcc;
+	--bg-mode-1: 255, 255, 255, 0.1;
+	--switch-border: 255, 255, 255, 0.1;
+	--switch-bg: 255, 255, 255, 0.05;
+	--settings-color: #8cffcc;
+	--swapper-info-color: 255, 255, 255, 0.5;
+}
+
+.theme-light {
+	--background-mobile-color: linear-gradient(180deg, rgba(139, 252, 179, 0), rgba(139, 252, 179, 0) 25%, rgba(139, 252, 179, 0.15) 29% 30%, rgb(213, 238, 222) 30% 43%, white 43% 44%, white 56%);
+	--background-mobile-color-1: white;
+	--aprtext-color: black;
+	--background-mobile-color-2: white;
+	--border-color: lightgrey;
+	--text-color: #070618;
+	--text-color-rgb: 7, 6, 24;
+	--background-color: #fff;
+	--background-color-rgb: 255, 255, 255;
+	--layout-bg-shape: rgba(83, 174, 148, 0.2);
+	--common-border-color-rgb: 7, 6, 24, 0.2;
+	--common-bg-color-rgb: 7, 6, 24, 0.1;
+	--header-bg: #070618;
+	--accent-yellow: #070618;
+	--accent-green: #070618;
+	--bg-mode-1: 7, 6, 24, 1;
+	--switch-border: 7, 6, 24, 0.05;
+	--switch-bg: 7, 6, 24, 0.05;
+	--settings-color: #070618;
+	--swapper-info-color: 7, 6, 24, 1;
+}
