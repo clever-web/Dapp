@@ -1,0 +1,58 @@
+.adoption-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 16px 0px;
+    background: url('./../../../assets/images/common/tiers/card-background.svg');
+    width: 210px;
+    height: 265px;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 5px;
+
+    &-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        &-top {
+            display: flex;
+            flex-direction: row;
+            height: 62px;
+            &-description {
+                margin: 5px 6px;
+                display: flex;
+                flex-direction: column;
+                &-title {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                &-subtitle {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &-middle {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            width: 100%;
+            margin: 0 19px;
+
+            &-title {
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            &-subtitle {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        &-last {
+            align-self: flex-end;
+        }
+    }
+
+}
