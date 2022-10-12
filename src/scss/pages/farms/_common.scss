@@ -1,0 +1,46 @@
+.farms {
+	position: relative;
+	margin-top: $size;
+
+	&__migration-icon {
+		margin: 0 5px;
+	}
+
+	&__name {
+		position: absolute;
+		top: -28px;
+		font-weight: 800;
+		font-size: 20px;
+		text-shadow: 0px 0px 18px #99FFCC, 0px 0px 8px #99FFCC;
+	}
+
+	// &__boxes {
+	// 	padding-top: $size-x4;
+	// }
+
+	&__box-container {
+		position: relative;
+		border-radius: 8px;
+		margin-top: $size-x6;
+		background-color: var(--background-color);
+		border: 1px solid rgba(var(--common-bg-color-rgb));
+
+		&:first-of-type {
+			margin-top: $size-x6;
+		}
+
+		&--opened {
+			border: 1px solid var(--text-color);
+		}
+
+		&--active {
+			box-shadow: 0px 0px 18px #99FFCC, 0px 0px 8px #99FFCC;
+		}
+
+		&--disabled {
+			background-color: var(--background-color);
+			opacity: 0.85;
+			filter: grayscale(1);
+		}
+	}
+}
