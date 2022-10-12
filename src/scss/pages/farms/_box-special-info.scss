@@ -1,0 +1,11 @@
+.farms__box__special-info {
+	display: flex;
+	align-items: center;
+	padding: $size;
+	border-top: 1px solid rgba(var(--common-border-color-rgb));
+
+	@include respond(phone_large) {
+		padding: 0;
+		border-top: none;
+	}
+}
