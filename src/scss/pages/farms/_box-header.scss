@@ -1,0 +1,102 @@
+.farms__box__header {
+	display: grid;
+	grid-template-columns: 64px 1fr 53px 11px;
+	column-gap: $size;
+	align-items: center;
+	padding: 10px;
+
+	@include respond(phone_large) {
+		grid-template-columns: auto 0.9fr 40px;
+		padding: 2px;
+	}
+
+	&__coins {
+		align-self: start;
+		@include flex-center(flex-start, center, row);
+
+		@include respond(phone_large) {
+			align-self: unset;
+			padding-left: 15px;
+		}
+
+		&__coin {
+			@include flex-center;
+			width: 32px;
+			height: 32px;
+			background-color: $white;
+			border-radius: 50%;
+
+			&:nth-child(2) {
+				position: relative;
+				right: 8px;
+			}
+		}
+	}
+
+	&__info {
+		@include respond(phone_large) {
+			display: grid;
+			height: 100%;
+
+			&--opened {
+				grid-template-rows: 1fr 1fr;
+			}
+		}
+
+		&__row {
+			@include flex-center(space-between, center, row);
+			height: 64px;
+			border-bottom: 1px solid transparent;
+
+			&--opened {
+				border-bottom: 1px solid rgba(var(--common-bg-color-rgb));
+			}
+		}
+
+		&__earn {
+			@include flex-center(space-between, center, row);
+			padding: 10px;
+			margin-top: 5px;
+			border-radius: 5px;
+			background-color: rgba(var(--common-bg-color-rgb));
+
+			&__txt {
+				font-size: $font-size-12;
+
+				@include respond(phone_large) {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+
+		&__last-column {
+			margin-right: 10px;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			border-bottom: 1px solid transparent;
+		}
+	}
+
+	&__apy {
+		.pill__bottom {
+			font-size: $font-size-12;
+		}
+
+		@include respond(phone_large) {
+			margin-left: $size-x2;
+		}
+	}
+
+	&__btn {
+		background: transparent;
+		border: none;
+		outline: none;
+		transform: rotate(-180deg);
+
+		&__opened {
+			transform: rotate(0);
+		}
+	}
+}
