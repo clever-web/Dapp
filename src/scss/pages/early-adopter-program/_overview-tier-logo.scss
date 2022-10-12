@@ -1,0 +1,24 @@
+.logo {
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    &-silver {
+        background: linear-gradient(130.44deg, #BDBDBD 6.79%, #898989 42.44%, #BBBBBB 71.77%, #F3F3F3 92.27%);
+    }
+    &-gold {
+        background: linear-gradient(133.31deg, #967E51 27.64%, #C2AB7E 70.45%, #9A855C 104.38%);
+    }
+    &-diamond {
+        background: linear-gradient(102.74deg, #BEB6C7 14.4%, #E0E3ED 29.64%, #A7ABC3 66.65%);
+    }
+    &-black {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: linear-gradient(104.6deg, #070618 17.74%, #282828 35.2%, #1C1B22 46.83%, #070618 64.89%);
+    }
+    &-default {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+    }
+}
