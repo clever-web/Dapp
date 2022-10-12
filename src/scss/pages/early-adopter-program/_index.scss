@@ -1,0 +1,17 @@
+.early-adoption-program {
+	position: relative;
+	margin-top: $size;
+
+	&__box {
+        max-width: 540px;
+		margin: 0 auto;
+        padding-top: $size-x4;
+
+        &__title {
+            font-size: $font-size-40;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+	}
+}
