@@ -1,0 +1,222 @@
+.home {
+	position: relative;
+	&__header__container {
+		position: relative;
+		overflow: hidden;
+		// padding-top: $size;
+		background: rgb(153, 255, 204);
+		background: linear-gradient(
+			0deg,
+			rgba(153, 255, 204, 1) 0%,
+			rgba(153, 255, 204, 0.58) 40%,
+			rgba(153, 255, 204, 0.22) 60%,
+			rgba(153, 255, 204, 0.01) 80%,
+			rgba(153, 255, 204, 0) 100%
+		);
+		z-index: 0;
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 120px;
+			padding-top: 0;
+			background-size: 128%;
+		}
+	}
+	&__header {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
+		row-gap: $size-x3;
+		background-position-x: -40px;
+		padding-bottom: $size;
+		background-image: url('../../../assets/images/pages/home/bg_shape_left_mobile.svg');
+		background-repeat: no-repeat;
+		@include respond(phone) {
+			width: 100%;
+			height: 100%;
+			grid-template-columns: auto auto auto;
+			grid-template-rows: 1fr;
+			column-gap: $size;
+			padding-bottom: 0;
+			background-position-x: -20px;
+			align-items: center;
+			background-image: url('../../../assets/images/pages/home/bg_shape_left_desktop.svg');
+			background-repeat: no-repeat;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 50%;
+			background-color: $dark;
+			z-index: -1;
+			@include respond(phone) {
+				content: none;
+			}
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 5px;
+			background-color: $dark;
+			z-index: -1;
+		}
+		&__total {
+			@include respond(phone) {
+				margin: 0 auto;
+			}
+		}
+		&__pill {
+			@include flex-center(flex-end, center, row);
+			@include respond(phone) {
+				width: 100%;
+				margin-left: 0;
+			}
+			&__user {
+				min-width: 100px;
+			}
+			&__price {
+				min-width: 100px;
+			}
+		}
+		&__summary {
+			grid-column: 1 / 3;
+			width: 100%;
+			@include respond(phone) {
+				grid-column: 1 / 2;
+				order: -1;
+			}
+			&__value {
+				font-size: $font-size-24 !important;
+			}
+		}
+		&__tiles {
+			grid-column: 1 / 3;
+			grid-row: 3 / 4;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			gap: $size-x2;
+            margin-bottom: $size-x2;
+			margin-top: 20px;
+			@include respond(phone) {
+				grid-column: 1 / 4;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-template-rows: 1fr;
+                margin: $size-x3 0;
+			}
+		}
+		&__tile {
+			&__title {
+				font-size: $font-size-14 !important;
+				font-weight: 500;
+			}
+			&__price {
+				font-size: $font-size-18;
+				font-weight: 700;
+			}
+			&__box {
+				@include flex-center(space-between, flex-start, row);
+				border: 1px solid rgba(var(--common-border-color-rgb));
+				border-radius: 10px;
+				padding: 10px;
+				margin-top: 5px;
+				&__title {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 7px;
+					&__apr{
+						background-color: var(--aprtext-color);
+					}
+					svg {
+						fill: var(--text-color);
+					}
+				}
+			}
+			@include respond(phone) {
+				&:nth-of-type(1) { order: 1; }
+				&:nth-of-type(2) { order: 3; }
+				&:nth-of-type(3) { order: 2; }
+				&:nth-of-type(4) { order: 4; }
+				&__title {
+					font-size: $font-size-14;
+				}
+				&__price {
+					font-size: $font-size-26;
+				}
+				&__box {
+					padding: 10px 10px 15px 20px;
+
+					&__first2 {
+						margin-top: 15px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			@include respond(phone_small) {
+				&:nth-of-type(1) { order: 1; }
+				&:nth-of-type(2) { order: 3; }
+				&:nth-of-type(3) { order: 2; }
+				&:nth-of-type(4) { order: 4; }
+				&__title {
+					font-size: $font-size-14;
+				}
+				&__price {
+					font-size: $font-size-26;
+				}
+				&__box {
+					padding: 10px 10px 20px 20px;
+				}
+
+				&__second2 {
+					margin-top: -15px;
+				}
+			}
+
+
+		}
+	}
+	@include respond(phone_large) {
+		&__content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			column-gap: $size-x3;
+		}
+	}
+	@include respond(phone_large) {
+		&__content {
+			padding-right: 15px;
+		}
+	}
+	@media (min-width: 1140px) {
+		&__content {
+			padding-right: 0;
+		}
+	}
+}
+
+.underLine {
+	width: 100%;
+	height: 0px;
+	margin: 3px auto;
+	border-top: 0.1px solid var(--text-color);
+	opacity: 0.5;
+	clear: both;
+}
+.copy_sth {
+	width: 10px;
+	height: 10px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	margin-left: 46%;
+}
