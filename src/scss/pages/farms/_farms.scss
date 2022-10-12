@@ -1,0 +1,88 @@
+.farms {
+	position: relative;
+
+	&__value-pill {
+		min-width: 120px;
+		// margin-left: 85%;
+		@media (max-width: 960px) {
+			display: none;
+		}
+	}
+
+	&__toggler {
+		@include flex-center;
+		height: 100%;
+		padding: 0 $size;
+	}
+
+	&__calculator {
+		cursor: pointer;
+		transition: opacity 0.15s ease;
+		width: 15px;
+		height: 15px;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__stake-modal {
+		&__icon-container {
+			position: relative;
+			right: 8px;
+		}
+
+		&--info {
+			padding: 10px 15px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			border-top: 1px solid rgba(var(--common-border-color-rgb));
+			border-bottom: 1px solid rgba(var(--common-border-color-rgb));
+		}
+
+		&__input {
+			position: relative;
+			@include flex-center(space-between, center, row);
+			width: 100%;
+			height: 50px;
+			padding: $size $size-x2;
+			border-radius: 5px;
+			background-color: rgba(var(--common-bg-color-rgb));
+
+			&--invalid {
+				border: 2px solid $error;
+			}
+
+			&--message {
+				position: absolute;
+				left: 50%;
+				bottom: -22px;
+				transform: translateX(-50%);
+				font-size: $font-size-12;
+				color: $error;
+			}
+		}
+	}
+
+	&__stake-amount {
+		margin-top: $size-x3;
+		padding: 0 $size-x2;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 15px;
+		column-gap: 15px;
+	}
+
+	&__stablefarm_first {
+		width: 100%;
+		text-align: left;
+		background: transparent;
+		outline: none;
+		border: none;
+		font-family: $font-primary;
+		font-size: $font-size-20;
+		font-weight: 700;
+		color: var(--text-color);
+	}
+}
