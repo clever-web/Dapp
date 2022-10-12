@@ -1,0 +1,211 @@
+.liquidity-mining {
+	&__box {
+		position: relative;
+		// display: grid;
+		// grid-template-columns: auto 60% auto;
+		column-gap: $size;
+		padding: $size-x3 $size-x3 $size-x3 $size-x3;
+		border-radius: 10px;
+		background-image: url('../../../assets/images/pages/home/liquidity_mining_event_mobile.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		opacity: 1;
+		z-index: 1;
+		float: left;
+		height: 100%;
+		width: 100%;
+
+
+		@include respond(phone) {
+			// background-image: url('../../../assets/images/pages/home/liquidity_mining_event_desktop.svg');
+			width: 100%;
+		}
+
+		@include respond(tablet) {
+			padding: $size-x3 $size-x3 0 $size-x3;
+			width: 100%;
+		}
+
+		&__col {
+			@include flex-center(flex-start, center, column);
+			flex-direction: initial !important;
+
+			&:nth-of-type(2) {
+				align-items: flex-start;
+				order: -1;
+
+				@include respond(phone) {
+					align-items: center;
+					justify-content: center;
+					order: unset;
+				}
+			}
+
+			&__img {
+				max-width: 125px;
+				max-height: 190px;
+				float: left;
+				@include respond(tablet) {
+					max-height: 100%;
+					margin-top: 20%;
+				}
+				@include respond(phone_small) {
+					max-width: 100px;
+				}
+			}
+
+			@include respond(tablet) {
+				align-items: center;
+			}
+
+			&__description {
+				font-size: $font-size-18;
+				font-weight: 800;
+				text-transform: uppercase;
+				font-style: italic;
+				text-align: center;
+				color: $white;
+				margin-top: auto;
+
+				@include respond(tablet) {
+					position: relative;
+					top: -40px;
+					font-size: $font-size-28;
+				}
+			}
+
+			&__left {
+				width: 40%;
+				float: left;
+				display: flex;
+				flex-direction: column;
+			}
+
+			&__right {
+				position: absolute;
+				bottom: 20px;
+				right: 15px;
+				width: 50%;
+				margin-top: 20%;
+				float: left;
+				display: flex;
+				justify-content: space-around;
+
+				&__1 {
+					float: left;
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				&__2 {
+					float: left;
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		}
+
+		&__txt {
+			font-size: $font-size-34;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-style: italic;
+			line-height: $line-height-base;
+
+			&--1 {
+				margin-bottom: 5px;
+				margin-top: 15px;
+				float: left;
+				color: $dark;
+				text-align: left !important;
+				@include respond(tablet) {
+					font-size: $font-size-30;
+				}
+				@include respond(phone_small) {
+					margin-top: 0px;
+					font-size: $font-size-22;
+				}
+			}
+
+			&--2 {
+				font-size: $font-size-60;
+				margin-bottom: $size;
+				
+				@include respond(tablet) {
+					font-size: $font-size-60;
+					margin-bottom: 0;
+				}
+				@include respond(phone_small) {
+					font-size: $font-size-34;
+				}
+			}
+
+			&--3 {
+				font-size: $font-size-16;
+				margin-bottom: $size;
+				float: left;
+				text-align: center;
+				width: 100%;
+				
+				
+
+				@include respond(phone_large) {
+					font-size: $font-size-16;
+					display: none;
+					margin-bottom: 0;
+				}
+			}
+
+			&--4 {
+				font-size: $font-size-16;
+				margin-bottom: $size;
+				text-align: center;
+				width: 100%;
+				float: left;
+				
+
+				@include respond(phone_large) {
+					font-size: $font-size-16;
+					display: none;
+					margin-bottom: 0;
+				}
+			}
+
+			@include respond(phone) {
+				text-align: center;
+			}
+		}
+
+		&__btn {
+			margin-bottom: 2px;
+			margin-top: $size-x2;
+			@include respond(phone) {
+				width: 100%;
+				margin-top: $size-x7;
+			}
+
+			@include respond(phone_large) {
+				margin-top: $size-x7;
+			}
+		}
+	}
+
+	@include respond(tablet) {
+		padding-right: 15px;
+	}
+
+	@media (min-width: 1140px) {
+		padding-right: 0;
+	}
+}
+
+
+.home_to_v1alpha {
+	margin-top: 100px;
+}
+
