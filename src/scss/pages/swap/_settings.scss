@@ -1,0 +1,53 @@
+.swap__settings {
+	position: absolute;
+	top: 25px;
+	right: -15px;
+	width: 200px;
+	background-color: var(--background-color);
+	border-radius: 5px;
+	border: 1px solid var(--settings-color);
+	z-index: 130;
+
+	&__title {
+		@include flex-center(flex-start, center, row);
+		padding: 15px;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__slippage {
+		padding: 15px;
+
+		&__container {
+			@include flex-center(stretch, center, row);
+		}
+
+		&__input {
+			width: 100%;
+			background-color: transparent;
+			padding: 10px;
+			text-decoration: underline;
+			font-family: $font-primary;
+			font-size: $font-size-14;
+			font-weight: 700;
+			color: var(--text-color);
+			outline: none;
+			border-radius: 5px;
+			border: 1px solid rgba(var(--common-border-color-rgb));
+		}
+
+		&__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: $dark;
+			font-size: $font-size-12;
+			text-decoration: underline;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			color: $green;
+		}
+	}
+}
