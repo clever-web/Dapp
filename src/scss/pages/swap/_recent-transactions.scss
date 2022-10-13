@@ -1,0 +1,50 @@
+.recent-transactions {
+	position: absolute;
+	top: 25px;
+	right: -15px;
+	width: 350px;
+	background-color: var(--background-color);
+	border-radius: 10px;
+	border: 1px solid var(--settings-color);
+	z-index: 130;
+
+	&__header {
+		@include flex-center(space-between, center, row);
+		padding: $size $size $size $size-x2;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__body {
+		padding: $size-x2 15px;
+
+		&__box {
+			@include flex-center(space-between, center, row);
+			padding: 0 $size 0 5px;
+			border: 1px solid rgba(var(--common-border-color-rgb));
+			border-radius: 5px;
+
+			&:not(:last-child) {
+				margin-bottom: $size;
+			}
+
+			&__icon {
+				position: relative;
+				@include flex-center;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 7px;
+					left: 50%;
+					transform: translateX(-50%);
+					@include flex-center;
+					width: 20px;
+					height: 20px;
+					background-color: $dark;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
