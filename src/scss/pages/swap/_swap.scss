@@ -1,0 +1,125 @@
+.swap {
+	position: relative;
+	margin-top: $size;
+	
+
+	&__header {
+		position: relative;
+		margin-top: $size;
+		max-width: 540px;
+		height: 120px;
+		@include flex-center;
+		margin: 0 auto;
+		border: 1px solid $green;
+		background-image: url('../../../assets/images/pages/swap/Alltop.png');
+		border-radius: 8px;
+		background-repeat: no-repeat;
+		background-position: 0 100%;
+		background-size: 100%;
+		overflow: hidden;
+
+		&__pack {
+			margin-top: -20px;
+			width: 35%;
+			text-align: center;
+			&__TVL {
+				font-style: italic;
+				text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
+				margin-top: -10px;
+				color:white;
+				@media (max-width: 500px) {
+					width: 38%;
+					font-size: 14px;
+					position: absolute;
+				}
+			}
+			&__busdTVL {
+				margin-left: -15px;
+				color:white;
+			}
+		}
+
+		&__character {
+			position: absolute;
+			width: 70px;
+			bottom: -10px;
+		}
+
+		&__textTitle {
+			width: 30%;
+			margin-top: -50px;
+			margin-left: -10px;
+		}
+	
+		&__left {
+			width: 75px;
+			height: 75px;
+		}
+	
+		&__right {
+			width: 75px;
+			height: 75px;
+		}
+
+		@media (max-width: 500px) {
+			&__left {
+				width: 65px;
+				height: 65px;
+			}
+		
+			&__right {
+				width: 65px;
+				height: 65px;
+			}
+		}
+	
+		@include respond(phone_large) {
+			height: 135px;
+			background-image: url('../../../assets/images/pages/swap/Alltop.png');
+		}
+	}
+
+	&__value-pill {
+		min-width: 120px;
+		@media (max-width: 960px) {
+			display: none;
+		}
+	}
+
+	&__box {
+		max-width: 540px;
+		margin: 0 auto;
+
+		&__container {
+			border: 1px solid var(--text-color);
+			border-radius: 10px;
+			background-color: var(--background-color);
+			overflow: hidden;
+		}
+	}
+
+	&__switch {
+		padding: 1px;
+
+		&__bg {
+			@include flex-center;
+			border-radius: 10px;
+			border: 1px solid rgba(var(--switch-border));
+			background-color: rgba(var(--switch-bg));
+		}
+
+		&__btn {
+			font-weight: 700;
+			text-decoration: none;
+			padding: 25px;
+			border-radius: 7px;
+			width: 100%;
+			color: var(--text-color);
+
+			&--active {
+				background-color: var(--text-color);
+				color: var(--background-color);
+			}
+		}
+	}
+}
