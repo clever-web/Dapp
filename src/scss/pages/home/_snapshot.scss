@@ -1,0 +1,22 @@
+.snapshot {
+	margin-top: $size-x2;
+
+	&__box {
+		padding: 4px;
+		border: 1px solid rgba($white, 0.2);
+		border-radius: 10px;
+		background-image: url('../../../assets/images/pages/home/snapshot_bg.svg');
+		background-repeat: no-repeat;
+		background-position: 100% 0;
+	}
+
+    &__cta {
+        margin-top: $size;
+        padding: 4px $size-x4;
+        border-radius: 8px;
+        background-color: $yellow;
+    }
+
+    @include respond(phone_large) {
+    }
+}
