@@ -1,0 +1,81 @@
+.v1alpha {
+	margin-top: $size-x2;
+
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: $size-x6 $size-x3;
+		border-radius: 10px;
+		float: left;
+		margin-bottom: 100px;
+		background-color: $violet;
+		background-image: url('../../../assets/images/pages/home/v1_alpha.svg');
+		background-repeat: no-repeat;
+		background-position: 90% 50%;
+		background-size: 30%;
+		z-index: 0;
+		margin-top: 10px;
+		width: 100%;
+		margin-right: 15px;
+		
+		@include respond(phone_small) {
+			background-size: 40%;
+		}
+
+		&__txt {
+			font-size: $font-size-24;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-style: italic;
+			.coming_soon {
+				font-size: 35px;
+				padding-left: 20px;
+				padding-top: 10px;
+			}
+			@include respond(phone_small) {
+				font-size: $font-size-20;
+				.coming_soon {
+					font-size: 20px;
+					padding-left: 0px;
+				}
+			}
+		}
+
+		@include respond(phone) {
+			height: 330px;
+			@include flex-center(flex-start, flex-start, column);
+			padding: $size-x3 $size-x3;
+			padding-top: $size-x6;
+			background-size: 30%;
+			background-position: 90% 50%;
+			margin-top: 1.5%;
+			margin-bottom: 50px;
+			width: 100%;
+
+			&__txt {
+				font-size: $font-size-50;
+			}
+		}
+	}
+
+	@include respond(tablet) {
+		padding-right: 15px;
+	}
+
+	@include respond(phone_large) {
+		padding-right: 15px;
+	}
+
+	@media (min-width: 1140px) {
+		padding-right: 0;
+	}
+}
+
+
+@media screen and (max-width: $mp-mobile) {
+
+	.liquidity-mining__box__col__right {
+		margin-top: 0 !important;
+	}
+}
