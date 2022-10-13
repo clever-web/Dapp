@@ -1,0 +1,145 @@
+.new-feature {
+	margin-top: $size-x2;
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+	padding: 0 !important;
+	&__box {
+		padding: $size-x6 $size-x2;
+		background-image: url('../../../assets/images/pages/home/Alltop.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 420px;
+		z-index: 1;
+		border-radius: 15px;
+		display: flex;
+		flex-direction: column;
+		background-position: center;
+		align-items: center;
+		@include respond(phone) {
+            padding: $size-x6;
+			background-position: center;
+			background-image: url('../../../assets/images/pages/home/Alltop.png');
+		}
+		@include respond(phone_small) {
+			border-radius: 0;
+			min-height: 320px;
+			background-position: center;
+            padding: $size-x2;
+			background-image: url('../../../assets/images/pages/home/Alltop.png');
+		}
+
+		&__img {
+			position: absolute;
+			max-width: 250px;
+			z-index: 2;
+			border-radius: 50%;
+			&__right {
+				width: 250px;
+				@include respond(phone_small) {
+					top: 0;
+					right: 55px;
+					width: 100px;
+				}
+				@media (min-width: 450px) and (max-width: 769px) {
+					right: 25px;
+					top: $size-x7;
+					width: 23%;
+				}
+				@include respond(phone) {
+					right: 60px;
+					width: 250px;
+				}
+			}
+			&__character {
+				width: 150px;
+				bottom: -15px;
+				@include respond(phone_small) {
+					width: 100px;
+				}
+				@media (min-width: 450px) and (max-width: 769px) {
+					width: 110px;
+				}
+				@include respond(phone) {
+					width: 150px !important;
+				}
+			}
+			&__top {
+				width: 120px;
+				top: 0px;
+				@include respond(phone_small) {
+					width: 100px;
+				}
+				@media (min-width: 450px) and (max-width: 769px) {
+					width: 100px;
+				}
+				@include respond(phone) {
+					width: 120px !important;
+				}
+			}
+			&__left {
+				width: 250px;
+				@include respond(phone_small) {
+					left: 55px;
+					top: 0;
+					width: 100px;
+				}
+				@media (min-width: 450px) and (max-width: 769px) {
+					left: 25px;
+					top: $size-x7;
+					width: 23%;
+				}
+				@include respond(phone) {
+					left: 60px;
+					width: 250px;
+				}
+			}
+		}
+
+		&__txt {
+			margin-top: 13%;
+			float: left;
+			font-size: $font-size-38;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-style: italic;
+
+			@include respond(phone) {
+				font-size: $font-size-60;
+				margin: 5% 5%;
+			}
+			@include respond(phone_small) {
+				font-size: $font-size-34;
+				margin-top: 75px;
+			}
+			.description {
+				font-size: 14px;
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+		}
+
+		&__txt > p {
+			text-align: center;
+		}
+		&__btn {
+			border-radius: 5px;
+			margin-top: -25px;
+			margin-right: 10px;
+			@include respond(phone_small) {
+				margin-top: 30px;
+				padding: 10px 40px !important;
+			}
+		}
+	}
+
+	@include respond(phone_large) {
+		// padding-right: 15px;
+		padding: 0 !important;
+		border-radius: 0 !important;
+	}
+
+	@media (min-width: 1140px) {
+		padding-right: 0;
+	}
+}
