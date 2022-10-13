@@ -1,0 +1,56 @@
+.home__simple {
+	margin-top: $size;
+
+	&__box {
+		position: relative;
+		padding: $size-x3;
+		border-radius: 10px;
+		background-color: $yellow;
+		background-image: url('../../../assets/images/pages/home/form_wizard.svg');
+		background-repeat: no-repeat;
+		background-position: 90% 50%;
+		background-size: 110px;
+		z-index: 1;
+		width:100%;
+
+		&__txt {
+			font-size: $font-size-46;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-style: italic;
+			@include respond(phone_small) {
+				font-size: $font-size-34;
+			}
+		}
+
+		&__txt > .c-dark {
+			margin-top: 20px;
+			font-size: $font-size-18;
+		}
+
+		&__txt > .c-dark.sub-title {
+			@include respond(phone_small) {
+				display: none;
+			}
+		}
+
+		&__txt > .mb-1 {
+			margin-top: 10px;
+			font-size: $font-size-36;
+			@include respond(phone_small) {
+				font-size: $font-size-22;
+			}
+		}
+
+		@include respond(phone) {
+			height: 330px;
+			@include flex-center(flex-start, flex-start, column);
+			padding: $size-x3 $size-x3;
+			background-position: 95% 75%;
+
+			&__txt {
+				font-size: $font-size-34;
+			}
+		}
+	}
+}
