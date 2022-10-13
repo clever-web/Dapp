@@ -1,0 +1,41 @@
+.pools__header {
+	position: relative;
+	margin-top: $size;
+	max-width: 540px;
+	height: 120px;
+	@include flex-center;
+	margin: 0 auto;
+	border: 1px solid $green;
+	border-radius: 8px;
+    background-color: $dark;
+	background-image: url('../../../assets/images/pages/pools/pools-header-bg-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	background-size: 100%;
+	overflow: hidden;
+
+	&__coins {
+		width: 53px;
+		height: 55px;
+	}
+
+	&__hero {
+		width: 48px;
+		height: 59px;
+	}
+
+	@include respond(phone_large) {
+		height: 135px;
+		background-image: url('../../../assets/images/pages/pools/pools-header-bg-desktop.svg');
+
+		&__coins {
+			width: 65px;
+			height: 69px;
+		}
+
+		&__hero {
+			width: 62px;
+			height: 77px;
+		}
+	}
+}
