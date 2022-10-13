@@ -1,0 +1,9 @@
+.transaction-modal {
+	padding: 3px;
+
+	&__footer {
+		padding: $size 0;
+		border: 1px solid rgba(var(--common-border-color-rgb));
+		border-radius: 8px;
+	}
+}
