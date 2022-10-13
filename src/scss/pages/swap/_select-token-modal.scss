@@ -1,0 +1,31 @@
+.select-token-modal {
+	&__header {
+		@include flex-center(space-between, center, row);
+		padding: $size $size $size $size-x2;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__search {
+		padding: $size-x2;
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__body {
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	&__list {
+		padding: $size-x2;
+
+		&__item {
+			@include flex-center(space-between, center, row);
+			padding: $size 0;
+			cursor: pointer;
+		}
+	}
+
+	&__footer {
+		padding: $size-x2;
+		text-align: center;
+	}
+}
