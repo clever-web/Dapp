@@ -1,0 +1,59 @@
+.liquidity-tab__sub-switch {
+	position: relative;
+	display: grid;
+	grid-template-columns: 90px 90px;
+	justify-content: center;
+	column-gap: $size-x4;
+	width: 100%;
+	border-bottom: 1px solid var(--text-color);
+
+	&__btn {
+		font-weight: 400;
+		text-decoration: none;
+		padding: 19.5px 0;
+		width: 100%;
+		height: 100%;
+		color: var(--text-color);
+
+		&--active {
+			position: relative;
+			color: var(--text-color);
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				height: 4px;
+				width: 100%;
+				background-color: var(--text-color);
+			}
+		}
+	}
+
+	&__actions__container {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		z-index: 130;
+	}
+
+	&__actions {
+		position: relative;
+		@include flex-center;
+
+		&__button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			height: 25px;
+			width: 25px;
+			cursor: pointer;
+			border: none;
+			outline: none;
+		}
+	}
+}
