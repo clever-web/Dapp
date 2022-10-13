@@ -1,0 +1,243 @@
+.liquidity-tab {
+	&__swap-to {
+		position: relative;
+	}
+
+	&__delete {
+		position: absolute;
+		top: 38px;
+		right: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+		height: 30px;
+		text-align: center;
+		color: var(--text-color);
+		font-family: $font-primary;
+		font-weight: 400;
+		font-size: $font-size-12;
+		text-decoration: underline;
+		background-color: transparent;
+		border-radius: 5px;
+		border: 1px solid var(--text-color);
+		cursor: pointer;
+		outline: none;
+
+		span {
+			padding-bottom: 3px;
+			margin-left: 15px;
+		}
+
+		@include respond(phone) {
+			position: unset;
+			top: unset;
+			right: unset;
+			margin-left: 80px;
+			margin-top: -15px;
+		}
+	}
+
+	&__submit {
+		padding: 25px;
+
+		@include respond(phone) {
+			margin-top: $size-x2;
+		}
+	}
+
+	&__extra-token {
+		margin-top: $size;
+		padding: 1px;
+
+		&__select {
+			position: relative;
+			@include flex-center;
+			width: 100%;
+			padding: $size-x2 15px;
+			background-color: $dark;
+			border: 1px solid rgba(var(--common-border-color-rgb));
+			border-radius: 5px;
+			font-size: $font-size-14;
+			font-weight: 700;
+			text-decoration: underline;
+			color: $green;
+			cursor: pointer;
+
+			&__icon {
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	&__remove {
+		&__header {
+			@include flex-center(flex-start, center, row);
+			padding: $size 15px;
+			border-bottom: 1px solid rgba(var(--common-border-color-rgb));
+
+			&__icon {
+				@include flex-center;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				background-color: var(--text-color);
+			}
+
+			&__right-col {
+				@include respond(phone_large) {
+					display: flex;
+					align-items: center;
+					height: 32px;
+					margin-right: auto;
+				}
+			}
+		}
+		&__input {
+			@include flex-center(space-between, flex-end, column);
+			margin-top: $size;
+			padding: 15px;
+			border-radius: 5px;
+			background-color: rgba(var(--bg-mode-1));
+
+			&__number {
+				width: 100%;
+				background: transparent;
+				font-family: $font-primary;
+				font-size: $font-size-24;
+				font-weight: 700;
+				color: $white;
+				outline: none;
+				border: none;
+				text-align: right;
+			}
+		}
+
+		&__message {
+			position: relative;
+
+			&.invalid::after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 0;
+				display: block;
+				height: 4px;
+				width: 97%;
+				background-color: $red;
+
+				@include respond(phone_large) {
+					left: unset;
+					right: 3px;
+					bottom: -28px;
+					transform: unset;
+					width: 336px;
+				}
+			}
+		}
+
+		.error-message {
+			position: absolute;
+			bottom: -20px;
+			right: 1.5%;
+			font-size: $font-size-12;
+			color: $red;
+
+			@include respond(phone_large) {
+				bottom: -45px;
+				right: 0;
+				width: 340px;
+				text-align: right;
+			}
+		}
+
+		&__amounts {
+			padding: 15px;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: $size-x2;
+
+			.btn {
+				height: 25px;
+			}
+
+			@include respond(phone_large) {
+				max-width: 342px;
+				margin-left: auto;
+				margin-right: 15px;
+				margin-top: -25px;
+                padding: 15px 0;
+
+				.btn {
+					padding-left: $size-x2;
+					padding-right: $size-x2;
+				}
+			}
+		}
+
+		&__boxes {
+			@include flex-center(stretch, center, row);
+			margin-top: $size;
+
+			@include respond(phone) {
+				margin-top: 0;
+			}
+
+			&__col {
+				@include flex-center(flex-start, center, row);
+				width: 100%;
+				border-radius: 5px;
+				padding: 15px $size;
+				background-color: rgba(var(--bg-mode-1));
+
+				&:not(:last-child) {
+					margin-right: $size;
+				}
+
+				&__img {
+					@include flex-center;
+					width: 32px;
+					height: 32px;
+					background-color: $white;
+					border-radius: 50%;
+					margin-right: $size;
+				}
+
+                img {
+                    max-height: 30px
+                }
+			}
+		}
+
+		&__summary {
+			@include flex-center(space-between, center, row);
+			margin-top: $size-x2;
+			padding: $size 15px;
+			border: 1px solid rgba(var(--common-border-color-rgb));
+			border-radius: 8px;
+
+			@include respond(phone) {
+				margin-top: 3px;
+			}
+		}
+
+		@include respond(phone) {
+			@include flex-center(space-between, center, row);
+			width: 100%;
+
+			&__input {
+				flex: 1;
+				margin-top: 0;
+				margin-left: $size-x4;
+			}
+
+			&__boxes {
+				width: 100%;
+			}
+		}
+	}
+}
