@@ -1,0 +1,42 @@
+.swapper {
+	padding: 3px;
+
+	&__row {
+		padding: 0 15px;
+
+		@include respond(phone) {
+			@include flex-center(space-between, center, row);
+			padding: $size-x2 15px;
+		}
+	}
+
+	&__info {
+		margin-top: 3px;
+		padding: $size;
+		border: 1px solid rgba(var(--common-border-color-rgb));
+		border-radius: 8px;
+
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 3px;
+
+			p {
+				color: rgba(var(--swapper-info-color));
+			}
+		}
+	}
+
+	&__exchange {
+		@include flex-center(space-between, center, row);
+		padding-left: 15px;
+		margin-top: 2px;
+		border: 1px solid rgba(var(--common-border-color-rgb));
+		border-radius: 8px;
+
+		&__rate {
+			@include flex-center;
+		}
+	}
+}
