@@ -1,0 +1,23 @@
+.swap-tab__header {
+	@include flex-center(space-between, center, row);
+	padding: 15px;
+	border-bottom: 1px solid var(--text-color);
+
+	&__actions {
+		position: relative;
+		@include flex-center;
+		z-index: 130;
+
+		&__button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			height: 25px;
+			width: 25px;
+			cursor: pointer;
+			border: none;
+			outline: none;
+		}
+	}
+}
