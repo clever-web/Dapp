@@ -1,0 +1,644 @@
+@media screen and (min-width: $bp-mobile) {
+.v1alpha {
+	position: relative;
+	margin-top: $size;
+
+	&__alpha {
+		max-height: 550px;
+		margin: 0 auto;
+		padding-top: $size-x4;
+		float: left;
+
+		&__mainLabel {
+			float: left;
+			width: 100%;
+			margin-bottom: 7px;
+			&__index {
+				margin-top: 8px;
+			}
+		}
+
+		&__rightBottom_content1 {
+			width: 100%;
+			margin: 10px 0;
+			float: left;
+		}
+
+		&__rightBottom_content2 {
+			width: 100%;
+			margin: 20px 0;
+			float: left;
+		}
+
+		&__rightBottom_content1 > label, &__rightBottom_content2 > label {
+			margin: 5px 0;
+		}
+
+		&__content {
+			max-width: 1000px;
+			float: left;
+			border-radius: 10px;
+			background-color: var(--background-color);
+			opacity: 0.9;
+			overflow: hidden;
+			margin: 5px;
+			width: 75%;
+			height: 550px;
+			padding: 5px;
+			border: 2px solid var(--text-color);
+			border-radius: 10px;
+			float: left;
+
+			&__money {
+				.c-dollar {
+					font-weight: 700;
+					line-height: 39px;
+				}
+			}
+
+			&__left {
+				padding: 3% 4%;
+				display: flex;
+				flex-direction: column;
+				width: 27%;
+				height: 100%;
+				float: left;
+				border-right: 1px solid grey;
+
+				&__markDescription {
+					margin-top: 10px;
+					float: left;
+				}
+				
+				&__markDescription > .thesis {
+					margin-bottom: 5%;
+					font-weight: 500;
+				}
+
+				&__markDescription > p {
+					line-height: 16px;
+					font-family: Barlow;
+					letter-spacing: 0.25px;
+				}
+
+				.mainMark {
+				}
+			}
+
+			&__right {
+				width: 73%;
+				float: left;
+				padding: 5px;
+				padding-left: 10px;
+			}
+		}
+
+		&__rightTop {
+			width: 22%;
+			margin: 5px;
+			background-color: var(--background-color);
+			opacity: 0.9;
+			border: 2px solid var(--text-color);
+			border-radius: 10px;
+			padding: 5px;
+			padding: 20px 0 !important;
+			float: left;
+		}
+
+		&__rightTopGraph {
+			margin-Top:10px;
+			padding-left: 10px;
+		}
+
+		&__rightBottom	 {
+			background-color: var(--background-color);
+			opacity: 0.9;
+			width: 22%;
+			height: 437px;
+			margin: 5px;
+			margin-top: 10px;
+			border: 2px solid var(--text-color);
+			border-radius: 10px;
+			padding: 5px;
+			float: left;
+		}
+
+		&__rightBottom_title {
+			margin: 25px 10px 0px 10px;
+			font-size: 12px;
+			height: 50px;
+		}
+		&__rightBottom_content {
+			margin: 0px 25px 25px 25px;
+			height: 170px;
+		}
+
+		&__bottom {	
+			width: 100%;
+			float: left;
+		}
+			
+		&__rightTitle {
+			font-family: Barlow;
+			font-style: italic;
+			line-height: 56px;
+			letter-spacing: 0.25px;
+			text-transform: uppercase;
+			color: var(--text-color);;
+			text-shadow:  0px 0px 12px #99FFCC;
+		}
+
+		&__rightWarning {
+			width: 100%;
+			padding: 24px;
+			text-align: center;
+			border-radius: 10px;
+			border: 1px solid var(--border-color);
+		}
+
+		&__withdrawModal {
+			padding: 15px;
+			border-radius: 10px;
+			display: flex;
+			justify-content: space-between;
+			border: 1px solid var(--border-color);
+			&__svg {
+				width: 10%;
+				text-align: center;
+			}
+			&__balance {
+				margin-left: 10px;
+				line-height: 15px;
+				width: 70%;
+			}
+			&__button {
+				padding: 10px 30px;
+				border-radius: 5px;
+				border: 0 solid;
+				font-weight: bold;
+				font-size: 14px;
+				text-decoration: underline;
+				background-color: #8ceabc;
+				outline: 1px solid;
+				outline-color: #5ceba6;
+				outline-offset: 0px;
+				text-shadow: none;
+				transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+				&:hover {
+					border: 1px solid;
+					background-color: #87f1be;
+					outline-color: rgba(255, 255, 255, 0);
+					outline-offset: 5px;
+					text-shadow: 1px 1px 2px #427388; 
+				}
+			}
+		}
+
+		&__deposite {
+			margin-left: 15px;
+			margin-top: 15px;
+			display: flex;
+		}
+
+		&__deposite > div, &__deposite_word{//here is part of Deposite region and can css made here.
+			margin-top: 4%;
+			float: left;
+		}
+
+		&__deposite_word{
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0.25px;
+		}
+
+		&__deposite_unit {
+			width: 30%;
+			line-height: 26px;
+			letter-spacing: 0.25px;
+			font-family: Barlow;
+			font-weight: bold;
+		}
+
+		&__rightTop {
+			display: flex;
+    		justify-content: space-evenly;
+			float: left;
+			margin: 5px 0 0 5px;
+		}
+
+		&__rightTopGraph {
+			float: left;
+			width: 47%;
+		}
+
+		&__rightTopLabel {
+			float: left;
+			max-width: 40%;
+		}
+    }
+
+	&__withraw {
+		width: 100%;
+		padding: 18px;
+		border-radius: 10px;
+		font-weight: 300;
+		text-align: center;
+		border: 1px solid var(--border-color);
+	}
+}
+}
+
+@media screen and (max-width: $bp-mobile) and (min-width: $mp-mobile) {              //mobile view !  it has to be responsive
+	.title {
+		width: 40%;
+	}
+
+	.pill__small__v1alpha_item > * {
+		font-size: 12px !important;
+		line-height: 10px;
+		letter-spacing: 0.2px !important;
+	}
+
+	.txt-right {
+		min-width: 50px !important;
+	}
+	
+	.pill__small {
+		min-width: none !important;
+	}
+
+	.mobile_Rectangle1 {
+		background: var(--background-mobile-color-2);
+		float: left;
+		width: 100%;
+		border: 1px solid var(--text-color);
+		border-radius: 10px;
+		padding: 2px;
+	}
+
+	.description_image{
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		.mainMark {
+			margin-left: 25%;
+			float: left;
+		}
+	}
+
+	.mobile_Rectangle2 {
+		// background-color: red;
+		margin-top: 10px;
+		margin-bottom: 100px;
+		padding: 5px;
+		float: left;
+		width: 100%;
+		border: 1px solid var(--text-color);
+		border-radius: 10px;
+		background: var(--background-mobile-color-1)
+	}
+
+	.mainMark {
+		margin-left: 2% !important;
+		padding-top: 10px;
+		border-radius: 50%;
+	}
+
+	.v1alpha {
+		position: relative;
+		margin-top: $size;
+
+		&__alpha {
+			&__title {
+				float: left;
+			}
+
+			&__mainLabel {
+				float: left !important;
+				margin: 10px 20px;
+				width: 100% !important;
+
+				div > p {
+					display: none;
+				}
+
+				&__index {
+					display: none;
+					// margin-top: 7px;
+					// margin-right: 8%;
+				}
+			}
+
+		&__deposite {
+			float: left;
+			margin-left: 10px;
+		}
+			
+		&__deposite > div, &__deposite_word{     //here is part of Deposite region and can css made here.
+			float: left;
+		}
+
+		&__deposite_word{
+			font-size: 13px;
+		}
+
+		&__deposite_unit {
+			line-height: 26px;
+			letter-spacing: 0.25px;
+			font-family: Barlow;
+			font-weight: bold;
+		}
+
+		&__inputSummary {
+			width: 97%;
+			margin: 10px auto;
+		}
+
+		&__content {
+			float: left;
+			&__left {
+				&__markDescription {
+					margin-left: 3%;
+					margin-top:10px;
+					width: 51%;
+					float: left;
+				}
+
+				&__markDescription > p {
+					font-size: 12px;
+				}
+
+				&__markDescription > p {
+					line-height: 16px;
+					width: 90%;
+				}
+
+				&__markDescription > .thesis {
+					margin-bottom: 5%;
+				}
+			}
+
+			&__money {
+				padding-top: 25px;
+				width: 45%;
+				float: left;
+			}
+
+			&__money > .c-dollar {
+				line-height: 30px;
+			}
+		}
+
+		&__rightTitle {
+			float: left;
+			font-family: Barlow;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 56px;
+			letter-spacing: 0.25px;
+			text-transform: uppercase;
+			color: var(--text-color);
+			text-shadow: 0px 0px 12px #99FFCC;
+		}
+
+		&__rightTop {
+			width:55%;
+			margin: 4px auto;
+			float: left;
+			border-radius: 10px;
+			border: 1px solid var(--text-color);
+			display: flex;
+			justify-content: space-between;
+		}
+		&__rightTopGraph {
+			width:30%;
+			min-width: 68px;
+			margin: 10px auto;
+			padding-left: 5px;
+			padding-top: 6px;
+			float: left;
+		}
+
+		&__rightTopLabel {
+			float: left;
+			width: 52%;
+			margin: 2px 4px;
+		}
+
+		&__rightBottom_title {
+			margin: 10px;
+			height: 40px;
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		&__rightBottom_content label {
+			font-size: 12px !important;
+			text-align: center !important;
+			margin-bottom: 10px;
+		}
+
+		&__rightBottom_content1 {
+			width: 50%;
+			float: left;
+			text-align: left;
+			margin-bottom: 10px;
+		}
+		&__rightBottom_content2 {
+			width: 50%;
+			float: left;
+			text-align: left;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__withraw {
+		margin-top: 5px;
+		width: 100%;
+		padding: 18px;
+		border-radius: 10px;
+		font-weight: 300;
+		text-align: center;
+		border: 1px solid var(--border-color);
+	}
+
+	&__withraw > p {
+		line-height: 16px;		
+	}
+	}
+}
+
+@media screen and (max-width: $mp-mobile) {
+
+	.v1alpha {
+		position: relative;
+		margin-top: $size;
+	}
+
+	div {
+		width: 100%;
+		text-align: center;
+	}
+
+	.v1alpha__alpha__deposite {
+		height:110px !important;
+		margin-top: 0 !important;
+		float: left;
+	}
+	.select-token-with-input__select__icon {
+		margin: 0 auto !important;
+	}
+
+	.select-token-with-input__summary__max {
+		float: left;
+	}
+
+
+	.title {
+		float: left;
+	}
+
+	svg {
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	.v1alpha__alpha__content__left__markDescription {
+		margin-top: 60px;
+		float: left;
+	}
+
+	.mainMark {
+		margin-left: 0 !important;
+		margin-top: 10px;
+		border-radius: 50%;
+	}
+
+	.v1alpha__alpha__rightTitle {
+		float: left;
+		font-family: Barlow;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 56px;
+		letter-spacing: 0.25px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		text-shadow: 0px 0px 12px #99FFCC;
+	}
+
+	.select-token-with-input__select__icon {
+		margin: 10px auto;
+		margin-top: 265px;
+	}
+
+	.v1alpha__withraw {
+		margin: 10px auto;
+		padding: 2px;
+		border: 1px dotted grey;
+		border-radius: 5px;
+	}
+
+	.v1alpha__alpha__rightBottom_content {
+		float: left;
+		margin: 0;
+		margin-top: 20px;
+		text-align: left;
+	}
+
+	.v1alpha__alpha__rightBottom_content2 {
+		margin-bottom: 140px;
+		float: left;
+	}
+}
+
+.my_modal_bottom {
+	top: 670px;
+}
+
+.pill__small__v1alpha_label {
+	float: left;
+	border:1px solid var(--text-color);;
+	border-radius: 5px;
+	text-align: center;
+	padding: 3px;
+	margin: 0 7px;
+	font-size: 14px;
+	width: 22%;
+	padding-bottom: 5px;
+}
+
+.pill__small__v1alpha_label:hover {
+	cursor: pointer;
+}
+
+.pill__small__v1alpha_label_selected {
+	background-color: gray;
+}
+
+.pill__small__v1alpha_modalDetail {
+	padding: 20px;
+	text-align: center;
+	line-height: 16px;
+	font-weight: 300;
+	font-size: 12px;
+	margin: 10px 5px !important;
+	border: 1px solid var(--border-color);;
+	border-radius: 5px;
+}
+
+.request-detail-title {
+	width: 100%;
+	text-align: center;
+	padding: 15px 30px;
+}
+
+.request-detail-content {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid gray;
+}
+.request-detail-content-no {
+	float: left;
+	width: 100%;
+	margin: 15% auto;
+	text-align: center;
+}
+
+.my_modal_top {
+	top: 330px;
+}
+
+.my_modal_last {
+	border: none;
+	top: 840px;
+}
+
+.myCustomTable {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.myCustomTable > tr > td, th {
+	border-bottom: 1px dotted gray;
+	font-size: $font-size-12;
+	font-weight: 300;
+	color: grey;
+	padding: 19px 0;
+}
+
+.myCustomTable > tr > td > p {
+	width: 80%;
+	margin-left: 10px;
+	padding: 2px 0 4px 0;
+}
+
+.myCustomTable > .titleTr > th, td {
+	padding: 10px 0;
+}
+
+.specailPillCharacter {
+	background-color: #50AF95;
+	border-radius: 50%;
+}
