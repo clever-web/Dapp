@@ -1,0 +1,59 @@
+// Margins
+@media (min-width: $bp-mobile) {
+	@include sizer('mb', 'margin-bottom', 'desktop');
+	@include sizer('mt', 'margin-top', 'desktop');
+	@include sizer('mr', 'margin-right', 'desktop');
+	@include sizer('ml', 'margin-left', 'desktop');
+}
+
+@media (max-width: $bp-mobile - 1) {
+    @include sizer('mb', 'margin-bottom', 'mobile');
+	@include sizer('mt', 'margin-top', 'mobile');
+	@include sizer('mr', 'margin-right', 'mobile');
+	@include sizer('ml', 'margin-left', 'mobile');
+}
+
+@include sizer('mb', 'margin-bottom');
+@include sizer('mt', 'margin-top');
+@include sizer('mr', 'margin-right');
+@include sizer('ml', 'margin-left');
+
+// Paddings
+@media (min-width: $bp-mobile) {
+	@include sizer('pb', 'padding-bottom', 'desktop');
+	@include sizer('pt', 'padding-top', 'desktop');
+	@include sizer('pr', 'margin-right', 'desktop');
+	@include sizer('pl', 'margin-left', 'desktop');
+}
+
+@media (max-width: $bp-mobile - 1) {
+    @include sizer('pb', 'padding-bottom', 'mobile');
+	@include sizer('pt', 'padding-top', 'mobile');
+	@include sizer('pr', 'margin-right', 'mobile');
+	@include sizer('pl', 'margin-left', 'mobile');
+}
+
+@media (max-width: $bp-mobile-large - 1) {
+    @include sizer('pb', 'padding-bottom', 'mobile-large');
+	@include sizer('pt', 'padding-top', 'mobile-large');
+	@include sizer('pr', 'margin-right', 'mobile-large');
+	@include sizer('pl', 'margin-left', 'mobile-large');
+}
+
+@include sizer('pb', 'padding-bottom');
+@include sizer('pt', 'padding-top');
+@include sizer('pr', 'padding-right');
+@include sizer('pl', 'padding-left');
+
+.p-small { padding: 5px; }
+
+.p-0 { padding: 0; }
+
+.m-0-auto { margin: 0 auto; }
+.m-auto-0 { margin: auto 0; }
+.ml-auto  { margin-left: auto; }
+.mr-auto  { margin-right: auto; }
+.mt-auto  { margin-top: auto; }
+.mb-auto  { margin-bottom: auto; }
+
+.ml-n1 { margin-left: -5px; }
