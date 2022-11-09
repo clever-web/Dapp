@@ -1,15 +1,15 @@
-import ConnectWallet from './ConnectWallet';
-import Currency from './Currency';
-// import Fuel from './Fuel';
+	import ConnectWallet from './ConnectWallet';
+	import Currency from './Currency';
+	// import Fuel from './Fuel';
 
-const MainActions = () => {
-	return (
-		<div className='main-actions'>
-			<Currency />
-			{/* <Fuel /> */}
-			<ConnectWallet />
-		</div>
-	);
-};
+	const MainActions = () => {
+		return (
+			<div className='main-actions'>
+				<Currency />
+				{/* <Fuel /> */}
+				<ConnectWallet />
+			</div>
+		);
+	};
 
-export default MainActions;
+	export default MainActions;
