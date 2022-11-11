@@ -1,19 +1,19 @@
-const { useRef, useEffect } = require("react");
+  const { useRef, useEffect } = require("react");
 
-export const useInterval = (callback, delay) => {
-  const savedCallback = useRef();
+  export const useInterval = (callback, delay) => {
+    const savedCallback = useRef();
 
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
+    useEffect(() => {
+      savedCallback.current = callback;
+    }, [callback]);
 
-  useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-    if (delay !== null) {
-      let id = setInterval(tick, delay);
-      return () => clearInterval(id);
-    }
-  }, [delay]);
-};
+    useEffect(() => {
+      function tick() {
+        savedCallback.current();
+      }
+      if (delay !== null) {
+        let id = setInterval(tick, delay);
+        return () => clearInterval(id);
+      }
+    }, [delay]);
+  };
